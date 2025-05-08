@@ -8,6 +8,9 @@
     "icons": {
       "48": "icons/pipe48.png"
     },
+
+    "author": "Chandy",
+    "homepage_url": "https://github.com/Chandy57/metalpipe",
   
     "background": {
         "scripts": ["pipe.js"]
