@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Metal Pipe Falling",
+    "version": "1.0",
+  
+    "description": "plays a metal pipe falling sound effect on random intervals. to keep you on your toes",
+  
+    "icons": {
+      "48": "icons/pipe48.png"
+    },
+  
+    "background": {
+        "scripts": ["pipe.js"]
+  }
+}
+  
