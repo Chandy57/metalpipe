@@ -11,6 +11,13 @@
 
     "author": "Chandy",
     "homepage_url": "https://github.com/Chandy57/metalpipe",
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "random-metal-pipe",
+        "strict_min_version": "109.0"
+      }
+    },
   
     "background": {
         "scripts": ["pipe.js"]
