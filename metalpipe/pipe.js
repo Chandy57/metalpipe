@@ -49,6 +49,7 @@ const sounds = {
   browser.runtime.onStartup.addListener(async () => {
     if(!is_running) {
         is_running = true;
+        keep_alive();
         await timer();
     }
     
