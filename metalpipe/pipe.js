@@ -1,6 +1,6 @@
 const sounds = {
     metal: {
-      audios: new Array(50).fill(undefined).map(() => new Audio('metal-pipe.ogg')),
+      audios: new Array(50).fill(undefined).map(() => new Audio('metalpipe2.mp3')),
       idx: 0
     },
   }
@@ -28,6 +28,7 @@ const sounds = {
     var rand = Math.floor(Math.random() * (max - min + 1) + min);
 
     await playSound('metal');
+    console.log("Random Time: " + rand);
 
     let promise = new Promise((resolve, reject) => {
         setTimeout(() => resolve("done!"), rand * 1000)
@@ -35,6 +36,12 @@ const sounds = {
 
     let result = await promise;
     await timer()
+  }
+
+  async function keep_alive() {
+      setInterval( () => {
+          console.log("stayin alive!");
+      }, 20000);
   }
 
   let is_running = false;
@@ -50,6 +57,7 @@ const sounds = {
   browser.runtime.onInstalled.addListener(async () => {
     if(!is_running) {
         is_running = true;
+        keep_alive();
         await timer();
     }
   })
